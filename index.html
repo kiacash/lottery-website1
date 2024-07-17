@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .ball {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f1c40f;
+            text-align: center;
+            line-height: 50px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Lottery Website</h1>
+        <div class="text-center">
+            <div id="balls-container"></div>
+        </div>
+        <div id="auth-container" class="text-center mt-4">
+            <h2>Sign Up / Log In</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="sign-up-btn">Sign Up</button>
+            <button id="log-in-btn">Log In</button>
+        </div>
+        <button id="purchase-btn" class="btn btn-primary mt-4">Purchase Ball for 1 Tether</button>
+    </div>
+    <script>
+        const ballsContainer = document.getElementById('balls-container');
+        for (let i = 1; i <= 1000; i++) {
+            const ball = document.createElement('div');
+            ball.classList.add('ball');
+            ball.innerText = i;
+            ballsContainer.appendChild(ball);
+        }
+    </script>
+</body>
+</html>
